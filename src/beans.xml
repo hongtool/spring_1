@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="person1" class="com.spring.beans.Person">
+		<property name="name" value="张三"></property>
+		<property name="age" value="15"></property>
+	</bean> -->
+	
+	<!-- <bean id="dog1" class="com.spring.beans.Dog">
+		<property name="type" value="博美"></property>
+	</bean>
+	<bean id="dog2" class="com.spring.beans.Dog">
+		<property name="type">
+			<value>哈士奇</value>
+		</property>
+	</bean> -->
+	
+	<!-- <bean id="dog3" class="com.spring.beans.Dog">
+		<constructor-arg value="金毛"></constructor-arg>
+	</bean> -->
+	
+	<!-- <bean id="car1" class="com.spring.beans.Car">
+		<constructor-arg value="宝马"></constructor-arg>
+		<constructor-arg value="长春"></constructor-arg>
+		<constructor-arg value="200000"></constructor-arg>
+	</bean> -->
+	<!-- <bean id="car1" class="com.spring.beans.Car">
+		<constructor-arg value="长春" index="1"></constructor-arg>
+		<constructor-arg value="宝马" index="0"></constructor-arg>
+		<constructor-arg value="200000" index="2"></constructor-arg>
+	</bean>
+	<bean id="car2" class="com.spring.beans.Car">
+		<constructor-arg value="路虎" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="天津汽车厂" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="150000" type="double"></constructor-arg>
+	</bean> -->
+	
+	<bean id="car1" class="com.spring.beans.Car">
+		<property name="type">
+			<value><![CDATA[<宝马>]]></value>
+		</property>
+		<property name="factory" value="北京一汽"></property>
+		<property name="price" value="500000"></property>
+	</bean>
+</beans>
