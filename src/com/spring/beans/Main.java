@@ -32,7 +32,15 @@ public class Main {
 //		Car car2 = ac.getBean("car2", Car.class);
 //		System.out.println(car2);
 		
-		Car car1 = ac.getBean("car1", Car.class);
+		/*Car car1 = ac.getBean("car1", Car.class);
 		System.out.println(car1);
+		Person person1 = (Person) ac.getBean("person1");
+		System.out.println(person1);
+		
+		Person person2 = (Person) ac.getBean("person2");
+		System.out.println(person2);*/
+		
+		Person person3 = (Person) ac.getBean("person3");
+		System.out.println(person3);
 	}
 }

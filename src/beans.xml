@@ -37,11 +37,42 @@
 		<constructor-arg value="150000" type="double"></constructor-arg>
 	</bean> -->
 	
-	<bean id="car1" class="com.spring.beans.Car">
+	<!-- <bean id="car1" class="com.spring.beans.Car">
 		<property name="type">
 			<value><![CDATA[<宝马>]]></value>
 		</property>
 		<property name="factory" value="北京一汽"></property>
 		<property name="price" value="500000"></property>
+	</bean>
+	
+	<bean id="person1" class="com.spring.beans.Person">
+		<property name="name" value="张三"></property>
+		<property name="age" value="12"></property>
+		<property name="car" ref="car1"></property>
+		<property name="car">
+			<ref bean="car1" />
+		</property>
+	</bean>
+	
+	<bean id="person2" class="com.spring.beans.Person">
+		<property name="name" value="张三"></property>
+		<property name="age" value="12"></property>
+		<property name="car">
+			<bean class="com.spring.beans.Car">
+				<property name="type" value="马自达"></property>
+				<property name="factory" value="中国一汽"></property>
+				<property name="price" value="80000"></property>
+			</bean>
+		</property>
+	</bean> -->
+	
+	<bean id="car1" class="com.spring.beans.Car"></bean>
+	<bean id="person3" class="com.spring.beans.Person">
+		<property name="name" value="张三"></property>
+		<property name="age" value="12"></property>
+		<property name="car" ref="car1"></property>
+		<property name="car.type" value="拖拉机"></property>
+		<property name="car.factory" value="中国农业汽车厂"></property>
+		<property name="car.price" value="80000"></property>
 	</bean>
 </beans>
