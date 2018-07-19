@@ -40,7 +40,10 @@ public class Main {
 		Person person2 = (Person) ac.getBean("person2");
 		System.out.println(person2);*/
 		
-		Person person3 = (Person) ac.getBean("person3");
-		System.out.println(person3);
+//		Person person3 = (Person) ac.getBean("person3");
+//		System.out.println(person3);
+		
+		Person person1 = (Person) ac.getBean("person1");
+		System.out.println(person1);
 	}
 }

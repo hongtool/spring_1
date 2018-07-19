@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
 	<!-- <bean id="person1" class="com.spring.beans.Person">
 		<property name="name" value="张三"></property>
@@ -66,7 +69,7 @@
 		</property>
 	</bean> -->
 	
-	<bean id="car1" class="com.spring.beans.Car"></bean>
+	<!-- <bean id="car1" class="com.spring.beans.Car"></bean>
 	<bean id="person3" class="com.spring.beans.Person">
 		<property name="name" value="张三"></property>
 		<property name="age" value="12"></property>
@@ -74,5 +77,22 @@
 		<property name="car.type" value="拖拉机"></property>
 		<property name="car.factory" value="中国农业汽车厂"></property>
 		<property name="car.price" value="80000"></property>
+	</bean> -->
+
+	<bean id="car1" class="com.spring.beans.Car" 
+		p:type="五菱宏光" p:factory="长安" p:price="12121">
+	</bean>
+	<bean id="car2" class="com.spring.beans.Car">
+		<property name="type" value="BMW"></property>
+		<property name="factory" value="北京一汽"></property>
+		<property name="price" value="300000"></property>
+	</bean>	
+	<util:list id="cars">
+		<ref bean="car1"/>
+		<ref bean="car2"/>
+	</util:list>
+	
+	<bean id="person1" class="com.spring.beans.Person" p:name="tom" 
+		p:age="12" p:cars-ref="cars">
 	</bean>
 </beans>
